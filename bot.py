@@ -5,7 +5,7 @@ import botconfig
 
 def get_prefix(bot, message):
     """A callable Prefix for our bot. This could be edited to allow per server prefixes."""
-    prefixes = '!'
+    prefixes = botconfig.config['prefixes']
     return commands.when_mentioned_or(*prefixes)(bot, message)
 
 # Define all of our cogs
