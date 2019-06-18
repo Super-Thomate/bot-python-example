@@ -13,7 +13,7 @@ class Invitation(commands.Cog):
     try:
       await member.send (botconfig.config['invite_bot'])
     except:
-      await ctx.message.channel.send ('Oups je ne peux pas envoyer de DM !')
+      await ctx.send ('Oups je ne peux pas envoyer de DM !')
   
   @commands.Cog.listener('on_message')
   async def invitation(self, message):
