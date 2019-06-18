@@ -1,13 +1,17 @@
 
-       _____               _            
-      / ____|             | |           
-     | |  __  __ _ _ __ __| | ___ _ __  
-     | | |_ |/ _` | '__/ _` |/ _ \ '_ \ 
-     | |__| | (_| | | | (_| |  __/ | | |
-      \_____|\__,_|_|  \__,_|\___|_| |_|
-                                        
+      _____                _   _       
+     / ____|              | | | |      
+    | |     __ _ _ __ ___ | |_| |_ ___ 
+    | |    / _` | '__/ _ \| __| __/ _ \
+    | |___| (_| | | | (_) | |_| ||  __/
+     \_____\__,_|_|  \___/ \__|\__\___|
+                                       
+                                      
 
-Garden is a skeleton discord bot using discord.py.
+
+
+
+Carotte is an example of discord bot using discord.py.
 
 API doc : <https://discordpy.readthedocs.io/en/latest/>
 
