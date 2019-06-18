@@ -7,6 +7,10 @@ class Invitation(commands.Cog):
     self.bot = bot
 
   @commands.command(name='invite')
-  async def hello(self, ctx):
-    """Send the url invitation link"""
-    await ctx.message.channel.send (botconfig.config['invite_bot'])
+  async def hello(self, ctx, member: discord.Member = None):
+    """Send the url invitation link in a DM"""
+    member = member or ctx.author
+    try:
+      await member.send (botconfig.config['invite_bot'])
+    except:
+      await ctx.message.channel.send ('Oups je ne peux pas envoyer de DM !')
