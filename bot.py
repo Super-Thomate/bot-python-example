@@ -3,8 +3,6 @@ import sys
 from discord.ext import commands
 import botconfig
 
-def log(user, log_message):
-  print ('[{0}] {1}: {2}'.format(date.today(), user, log_message))
 def get_prefix(bot, message):
     """A callable Prefix for our bot. This could be edited to allow per server prefixes."""
     prefixes = '!'
