@@ -10,6 +10,7 @@ def get_prefix(bot, message):
 
 # Define all of our cogs
 initial_extensions = [   'cogs.loader'
+                       , 'cogs.poll' # poll on dev
                      ]
 
 bot = commands.Bot(command_prefix=get_prefix)
