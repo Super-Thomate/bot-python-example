@@ -24,14 +24,17 @@ class Poll(commands.Cog):
         # A question incoming
         next_is = "question"
       elif arg.startswith("$"):
-        # answer incoming
-        current_anwser += 1
-        answers.append (arg[1:])
-        next_is = "answer"
-      elif arg.startswith("\\"):
-        # emoji
-        arg = arg[1:]
-        next_is = "emoji"
+        # answer or emoji incoming
+        print (f"arg: {arg} => current: {next_is}")
+        if not next_is == "answer":
+          current_anwser += 1
+          answers.append (arg[1:])
+          next_is = "answer"
+        else:
+          # emoji
+          arg = arg[1:]
+          next_is = "emoji"
+      print (f"arg: {arg} => todo: {next_is}")
       # Now that i know what todo
       if next_is == "question":
         if not arg == "$q":
@@ -55,4 +58,6 @@ class Poll(commands.Cog):
     embed = discord.Embed(colour=156805)
     embed.set_author(icon_url=author.avatar_url, name=str(author))
     embed.add_field(name=question, value=answer)
-    await ctx.send(content=None, embed=embed)
+    poll = await ctx.send(content=None, embed=embed)
+    for emoji in emojis:
+      await poll.add_reaction(emoji)
